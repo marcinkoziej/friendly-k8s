@@ -1,6 +1,6 @@
 Hi:wave:,
 
-This repo contains bunch of scripts to get you easily up and running with Kubernetes + Rancher 2.
+This repo contains bunch of scripts to get you easily up and running with Kubernetes + Rancher 2. It uses K3S, a lightweight variant of K8S developed by the rancher people. You can obviously install standard K8S - and still control it by Rancher 2. In such case ignore first 3 steps.
 
 # Installation
 
