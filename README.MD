@@ -24,4 +24,5 @@ You should have:
 ### If all worked fine
 
 1. Copy `k3s.service` to `/etc/systemd/system` and enable it `systemctl enable k3s.service`
+1. Your container runtime should also be enabled by default (containerd or docker)
 1. You might want to enable swap - see `create-swap.service` (A one time service to create a swap file) and `swap.service` (enable swap on each boot)
