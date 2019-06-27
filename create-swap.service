@@ -1,0 +1,15 @@
+[Unit]
+Description=Create swap file
+Before=swap.service
+
+[Service]
+Type=oneshot
+Environment="SWAPFILE=/4GiB.swap"
+ExecStart=/usr/bin/touch ${SWAPFILE}
+ExecStart=/usr/bin/fallocate -l 4098m ${SWAPFILE}
+ExecStart=/bin/chmod 600 ${SWAPFILE}
+ExecStart=/sbin/mkswap ${SWAPFILE}
+
+[Install]
+WantedBy=multi-user.target
+

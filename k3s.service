@@ -1,0 +1,14 @@
+[Unit]
+Description=Kubernetes
+After=docker.service
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/var/lib/rancher
+ExecStart=/usr/local/bin/k3s server --docker
+Restart=on-failure
+# Other Restart options: or always, on-abort, etc
+
+[Install]
+WantedBy=multi-user.target
